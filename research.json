@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Blockchain",
+    "overview": "Research exploring Blockchain as a foundation for trustworthy digital ecosystems...",
+    "focus_areas": [
+      {"icon":"fa-link","text":"Decentralized Identity & Persistent Identifiers (DIDs)"},
+      {"icon":"fa-cogs","text":"Smart Contract Development & DAO Frameworks"},
+      {"icon":"fa-database","text":"Distributed Systems & IPFS Storage Solutions"},
+      {"icon":"fa-shield-alt","text":"Trust Frameworks for Supply Chain and Industrial IoT"}
+    ],
+    "technologies": "Leveraging Hyperledger Fabric, Solidity, IPFS, and the Handle System for resilient digital platforms.",
+    "milestones": [
+      {"year":"2021","description":"Developed initial Blockchain & IPFS architecture for credential verification."},
+      {"year":"2022","description":"Published paper 'Using Handle System for Persistent Identifiers' (ICCECE)."},
+      {"year":"2023","description":"Developed Smart Contract Framework for Industrial IoT Predictive Maintenance."},
+      {"year":"2024","description":"Created DAO Governance Model for Decentralized Education and Supply Chain Collaboration."}
+    ],
+    "projects": [
+      {"name":"Blockchain Diploma Verification","image":"images/project1.png"},
+      {"name":"Industrial IoT Framework","image":"images/project2.png"},
+      {"name":"DAO Governance Model","image":"images/project3.png"}
+    ]
+  }
+]

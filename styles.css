@@ -1,0 +1,98 @@
+/* GENERAL SECTIONS */
+section {
+  position: relative;
+  padding: 60px 0;
+}
+section h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #7390cb;
+  margin: 12px auto 24px auto;
+  border-radius: 3px;
+}
+section p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* DIFFERENTIATE SECTIONS BY BACKGROUND COLOR */
+#about {
+  background: linear-gradient(135deg, #f9f9ff, #e8f1ff);
+}
+
+#Skills {
+  background: linear-gradient(135deg, #ffffff, #f1f5ff);
+}
+
+#Research\ Interests {
+  background: linear-gradient(135deg, #f9fafc, #eef3fa);
+}
+
+#Projects {
+  background: linear-gradient(135deg, #fafbff, #f1f5ff);
+}
+
+#Publications {
+  background: linear-gradient(135deg, #ffffff, #f9fafc);
+}
+
+#contact {
+  background: linear-gradient(135deg, #f9f9ff, #edf1ff);
+}
+
+/* STYLE CARDS */
+.card,
+.skill-card,
+.research-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.card:hover,
+.skill-card:hover,
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.12);
+}
+
+/* BUTTONS */
+.btn,
+.filter-btn {
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* PUBLICATION LIST STYLE */
+.publication {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 5px solid #7390cb;
+  box-shadow: 0px 2px 15px rgba(0,0,0,0.07);
+}
+.publication:hover {
+  border-left-color: #526fa7;
+}
+
+/* DOWNLOAD BUTTON STYLE */
+.download-cv {
+  background-color: #7390cb;
+  color: #fff;
+}
+.download-cv:hover {
+  background-color: #526fa7;
+}
+
+/* HEADINGS ADJUSTMENT ON MOBILE */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 1.8rem;
+  }
+}

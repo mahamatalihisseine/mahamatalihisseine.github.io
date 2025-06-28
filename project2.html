@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project 2 | UBHS Architecture</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- BOOTSTRAP CDN -->
+<link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.min.css" 
+  rel="stylesheet">
+<!-- FONTAWESOME CDN -->
+<link 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+  rel="stylesheet">
+<!-- AOS STYLES -->
+<link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<!-- MAIN STYLES -->
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+.header {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('prject2background.png') no-repeat center center/cover;
+}
+.header::before {
+  content:'';
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.55);
+}
+.header h1 {
+  position:relative;
+  font-size:3rem;
+  font-weight:bold;
+}
+.content {
+  padding:60px 20px;
+}
+.content h2 {
+  font-size:2rem;
+}
+.content p, .content li {
+  font-size:1.1rem;
+  line-height:1.7;
+}
+.icon {
+  font-size:1.5rem;
+  color:#007BFF;
+}
+.footer {
+  text-align:center;
+  padding:40px 20px;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0px 15px 30px rgba(0,0,0,0.1);
+  transition:all 0.3s ease;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>Project 2: Unified Blockchain Handle System (UBHS)</h1>
+</header>
+
+<!-- MAIN CONTENT -->
+<section class="content container">
+
+  <!-- Overview -->
+  <div class="mb-5" data-aos="fade-up">
+    <h2>Overview</h2>
+    <p>The UBHS project proposes a next‑generation <strong>Blockchain‑based Handle System Architecture</strong>
+         designed for seamless cross‑domain interoperability. Its goal is to create a robust,
+          decentralized identifier and access framework, addressing complex 
+          disaster management scenarios (such as floods) across 
+          four application domains: <strong>Education</strong>, <strong>Industrial IoT</strong>,
+           <strong>Data Sharing</strong>,
+           and <strong>Social Media Research</strong>.</p>
+  </div>
+
+  <!-- Architecture Focus Areas -->
+  <div class="mb-5" data-aos="fade-right">
+    <h2>Research Focus Areas</h2>
+    <div class="row g-3 mt-3">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 p-3 text-center">
+            <i class="fa fa-graduation-cap icon"></i>
+            <h5>Education</h5>
+            <p>Ensure long‑term trust and traceability for academic records and 
+                digital credentials across institutions and borders.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 p-3 text-center">
+            <i class="fa fa-industry icon"></i>
+            <h5>Industrial IoT</h5>
+            <p>Provide secure, decentralized access and identifier resolution
+                 for connected IoT devices in manufacturing environments.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 p-3 text-center">
+            <i class="fa fa-database icon"></i>
+            <h5>Data Sharing</h5>
+            <p>Foster trusted and privacy‑aware data access across organizations,
+                 researchers, and industries using UBHS identifiers.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 p-3 text-center">
+            <i class="fa fa-users icon"></i>
+            <h5>Social Media Research</h5>
+            <p>Provide persistent identifiers for digital content and user profiles, 
+                supporting research and long‑term access in social media platforms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UBHS Architecture Diagram Placeholder -->
+  <div class="mb-5" data-aos="fade-up">
+     <a href="ubhs.html" title="More about the UBHS Architecture">
+  <img src="project2UBHS.png" 
+       alt="UBHS Architecture Diagram" 
+       class="img-fluid rounded"></a>
+  </div>
+
+  <!-- Final Remarks -->
+  <div class="mb-5" data-aos="fade-left">
+    <h2>Summary</h2>
+    <p>The UBHS advances the Handle System by providing a highly interoperable, 
+        blockchain‑based identifier architecture. Through four subsystems — Education,
+         Industrial IoT, Data Sharing, and Social Media Research — UBHS aims to create a robust, 
+         secure, and trusted framework for managing digital resources across diverse domains, making it ideal 
+        for disaster recovery and resilient data access in crisis scenarios like floods.</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <a href="../#Projects" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to Projects</a>
+</div>
+
+<!-- Scripts -->
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script> AOS.init({ duration:1000, once:true }); </script>
+</body>
+</html>

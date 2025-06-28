@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>UBHS Architecture Interactive Diagram</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<!-- Mermaid CDN -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<div class="footer">
+  <a href="../#Projects" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to Projects</a>
+</div>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .diagram-container {
+    flex: 0 0 480px; /* fixed width */
+    max-width: 480px;
+  }
+  .details-container {
+    flex: 1;
+    max-width: 600px;
+  }
+  .detail-box {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #007BFF;
+    background-color: #f9fafb;
+  }
+  .detail-box h3 {
+    margin: 0 0 5px 0;
+  }
+</style>
+</head>
+<body>
+<h2>UBHS Architecture Interactive Diagram</h2>
+<div class="container">
+  <div class="diagram-container">
+    <div class="mermaid">
+flowchart LR
+    subgraph UBHS[⛓️ UBHS Architecture]
+        UBHS_Core[✅ UBHS Core]
+        HL[🔍 Handle Resolver]
+        IPFS[☁️ IPFS / Off-Chain Storage]
+        CONSENT[👥 Consent Service]
+        REVOKE[🚫 Revocation Service]
+        AUDIT[📋 Audit Service]
+    end
+    subgraph DOMAINS[🌐 Application Domains]
+        EDU[👩‍🎓 Education]
+        IIOT[🏭 Industrial IoT]
+        SM[👥 Social Media]
+        DS[📂 Data Sharing]
+    end
+    A[👤 User] --> UBHS_Core
+    UBHS_Core --> HL
+    UBHS_Core --> IPFS
+    UBHS_Core --> AUDIT
+    UBHS_Core --> EDU
+    UBHS_Core --> IIOT
+    UBHS_Core --> SM
+    UBHS_Core --> DS
+    UBHS_Core --> CONSENT
+    UBHS_Core --> REVOKE
+    </div>
+  </div>
+
+  <div class="details-container">
+    <div id="UBHS_Core_detail" class="detail-box">
+      <h3>✅ UBHS Core</h3>
+      <p>The central component providing Blockchain Smart Contracts and the Handle System for trusted identifier resolution and access control across domains.</p>
+    </div>
+
+    <div id="HL_detail" class="detail-box">
+      <h3>🔍 Handle Resolver</h3>
+      <p>Resolves persistent identifiers across platforms, ensuring long‑term access and cross‑domain trust.</p>
+    </div>
+
+    <div id="IPFS_detail" class="detail-box">
+      <h3>☁️ IPFS / Off-Chain Storage</h3>
+      <p>Secure, decentralized storage for medical records, academic diplomas, IoT data, and other critical files associated with identifiers.</p>
+    </div>
+
+    <div id="CONSENT_detail" class="detail-box">
+      <h3>👥 Consent Service</h3>
+      <p>Manages user consents, allowing stakeholders to accept, review, or revoke access requests securely and transparently.</p>
+    </div>
+
+    <div id="REVOKE_detail" class="detail-box">
+      <h3>🚫 Revocation Service</h3>
+      <p>Enables the invalidation of access and identifiers, supporting privacy, compliance, and security across UBHS domains.</p>
+    </div>
+
+    <div id="AUDIT_detail" class="detail-box">
+      <h3>📋 Audit Service</h3>
+      <p>Logs every access request, transaction, and revocation to support accountability, traceability, and compliance across domains.</p>
+    </div>
+
+    <div id="EDU_detail" class="detail-box">
+      <h3>👩‍🎓 Education Domain</h3>
+      <p>Supports digital diplomas and academic records by making them verifiable and persistent across institutions and borders.</p>
+    </div>
+
+    <div id="IIOT_detail" class="detail-box">
+      <h3>🏭 Industrial IoT Domain</h3>
+      <p>Assigns trusted identifiers for IoT devices and streamlines access to device data for maintenance, auditing, and lifecycle management.</p>
+    </div>
+
+    <div id="SM_detail" class="detail-box">
+      <h3>👥 Social Media Domain</h3>
+      <p>Establishes trusted identifiers for digital profiles and social media data, ensuring long‑term access and verification across platforms and services.</p>
+    </div>
+
+    <div id="DS_detail" class="detail-box">
+      <h3>📂 Data Sharing Domain</h3>
+      <p>Supports trusted access and sharing of medical, research, and governmental data across organizations, preserving privacy and accountability through UBHS services.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({ startOnLoad:true });
+</script>
+</body>
+</html>

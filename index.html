@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My One Page Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Mahamat Ali</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+         <li class="nav-item"><a class="nav-link" href="#Skills">Skills</a></li>
+         <li class="nav-item"><a class="nav-link" href="#Research Interests">Research Interests</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Publications">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="home-section d-flex flex-column flex-lg-row">
+  <!-- Left Side: Parallax Image + Caption -->
+  <div class="home-left col-lg-5 d-none d-lg-flex justify-content-center align-items-center p-4">
+    <div class="image-container" data-caption="Persistent data"></div>
+  </div>
+
+  <!-- Right Side: Text + Photo + Button -->
+  <div class="home-right col-12 col-lg-7 d-flex flex-column justify-content-center p-5">
+    <h1 class="fw-bold" data-aos="fade-up">Deliver well‑crafted, authoritative content 
+      that elevates ideas and connects with readers.</h1>
+    <hr class="w-25 border-dark mt-3" data-aos="fade-right">
+    <div class="d-flex flex-column align-items-start mt-3" data-aos="fade-up" data-aos-delay="100">
+      <p></pstyle="margin-right:20px;" >
+      <img src="myphoto.jpg" alt="My Photo" class="rounded-circle profile-img" loading="lazy" style="margin-right:20px;" >
+        <p class="fw-bold">Mahamat Ali</p, slyle="margin-center">
+   <div>
+    <p>From healthcare and central banking to e‑government and agriculture,
+       our work harnesses the combined power of Blockchain and the Handle System to create secure,
+       trusted, and interoperable digital platforms. We enable seamless data sharing,
+       robust digital identities, and sustainable traceability — making complex ecosystems more
+       transparent, accessible, and resilient across industries and nations.
+    </p>
+  </div>
+    </div>
+    <div class="d-flex flex-wrap gap-3 mt-4" data-aos="zoom-in">
+  <a href="CV_English.pdf" class="btn btn-lg text-white" style="background-color:#7390cb;" download>
+    📄 Download CV (English) &nbsp;<i class="fa fa-download"></i>
+  </a>
+  <a href="CV_Chinese.pdf" class="btn btn-lg text-white" style="background-color:#4caf50;" download>
+    📄 Download CV (Chinese) &nbsp;<i class="fa fa-download"></i>
+  </a>
+</div>
+  </div>
+</section>
+
+
+<!-- Styles -->
+<style>
+.home-section {
+  min-height:100vh;
+}
+.image-container {
+  position: relative;
+  background-image: url("left.png"); /* Replace with actual path */
+  background-size: cover;
+  background-position: top center;
+   background-repeat: no-repeat;
+  border-radius: 12px;
+  width: 90%; 
+  height: 80vh;
+}
+.image-container::after {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size:1.25rem;
+  font-weight: bold;
+  color:#fff;
+  padding:8px 16px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius:6px;
+}
+.profile-img {
+  width:130px;
+  height:130px;
+  object-fit:cover;
+}
+@media (max-width: 991px) {
+  .image-container {
+    height:40vh;
+    width:100%;
+    border-radius:0;
+    background-attachment: scroll;
+  }
+}
+</style>
+
+<!-- Scripts for AOS Animations -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1000, once:true});</script>
+
+<section id="about" class="py-5" style="background-color:#ffffffbb;">
+  <div class="container">
+    <h2 class="text-center fw-bold">About Me</h2>
+    <p class="text-center text-muted">Education • Professional Experience • Global Outlook</p>
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-md-9">
+        <!-- Education Section -->
+        <div class="mb-5">
+          <h3 class="fw-bold">🎓 Education</h3>
+          <ul class="list-unstyled ms-3">
+            <li><strong>Ph.D. in Computer Science and Technology</strong> (September 2020 – July 2025)  
+                <span class="text-muted">Tongji University, Shanghai, China</span>  
+                <br>Research Focus: Blockchain, Distributed Systems, Handle System</li><br>
+            <li><strong>Master’s Degree in Computer Science and Technology</strong> (September 2014 – July 2017)  
+                <span class="text-muted">[University of Science and Technology Beijing], [Beijing, China]</span>  
+                <br>Focus: Parallel computing, and Sort algorithm</li><br>
+            <li><strong>Bachelor’s Degree in Computer Science and Technology</strong> (September 2008 – July 2012)  
+                <span class="text-muted">[University of Science and Technology Beijing], [Beijing, China]</span>  
+                <br>Focus: Programming, Operating Systems, and Web design</li>
+          </ul>
+        </div>
+
+        <!-- Experience Section -->
+        <div>
+          <h3 class="fw-bold">💼 Professional Experience</h3>
+          <p>With over nine years of experience in international cooperation, technology-focused roles, and project management, I have worked to foster digital trust and collaboration.</p>
+          <ul class="list-unstyled ms-3">
+            <li>✅ Leading multidisciplinary teams to implement digital platforms and research projects across academic and industrial settings</li><br>
+            <li>✅ Driving global collaboration and cross-border knowledge-sharing for trusted digital ecosystems and sustainable technologies</li><br>
+            <li>✅ Developing and managing international projects focusing on Blockchain adoption, digital object architecture (DOA), and IoT trustworthiness</li>
+          </ul>
+        </div>
+
+        <!-- Global Outlook -->
+        <div class="mt-4">
+          <h3 class="fw-bold">🌍 Global Outlook</h3>
+          <p>Fluent in <strong>French, English, Arabic, and Chinese</strong>, I have a deep appreciation for diversity and 
+            a proven ability to adapt to various cultural and professional environments.
+             I am passionate about leveraging technology for trust, inclusion, and global digital equity.</p>
+        </div>
+      </div>
+    </div>
+         <!-- DOWNLOAD CV BUTTON -->
+    <div class="text-center mt-4">
+  <a href="CV_English.pdf" class="btn btn-primary btn-lg me-2" download>📄 Download CV (English)</a>
+  <a href="CV_Chinese.pdf" class="btn btn-success btn-lg" download>📄 Download CV (Chinese)</a>
+</div>
+  </div>
+</section>
+
+<section id="Skills" class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold">Skills</h2>
+    <p class="text-center text-muted">Explore my areas of expertise across Blockchain, 
+      Web Development, and programming.</p>
+    
+    <!-- Filter Buttons -->
+    <div class="text-center mt-4">
+      <button class="btn btn-outline-primary me-2 filter-btn" data-filter="All">All</button>
+      <button class="btn btn-outline-primary me-2 filter-btn" data-filter="Blockchain">Blockchain</button>
+      <button class="btn btn-outline-primary me-2 filter-btn" data-filter="Web">Web</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="Programming language">Programming language</button>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="row g-3 mt-4" id="skillGrid">
+       <div class="col-12 col-md-4 skill-item" data-category="Blockchain">
+        <div class="skill-card text-center">
+          <img src="skill1.png" alt="Blockchain Development" class="img-fluid rounded" style="max-height:150px;">
+          <h5 class="mt-3">Blockchain Development</h5>
+         <p>Proficient in designing and deploying Smart Contracts to enable trustless,
+             automated transactions. Skilled in leveraging IPFS for decentralized storage,
+              implementing Hyperledger Fabric for enterprise-grade distributed ledger solutions,
+               and utilizing the Handle System for creating persistent digital identifiers. 
+               Experienced with DAO Frameworks to support decentralized governance and collaborative ecosystems,
+                ensuring secure, transparent, and resilient applications across industries.</p>
+        </div>
+      </div>
+       <div class="col-12 col-md-4 skill-item" data-category="Web">
+        <div class="skill-card text-center">
+          <img src="web.png" alt="Web Development" class="img-fluid rounded" style="max-height:150px;">
+          <h5 class="mt-3">Web Development</h5>
+             <p>Experienced in building responsive, user-friendly websites and web applications
+             using HTML5, CSS3, and JavaScript. Proficient in creating clean, accessible 
+             layouts and interactive features that work seamlessly across devices. Skilled 
+             in integrating REST APIs, and working with backend frameworks to deliver secure, 
+             dynamic, and efficient web solutions that meet modern standards and user expectations.</p>
+        </div>
+      </div>
+   <div class="col-12 col-md-4 skill-item" data-category="Programming language">
+        <div class="skill-card text-center">
+          <img src="programming.png" alt="Programming Language" class="img-fluid rounded" style="max-height:150px;">
+          <h5 class="mt-3">Programming Language</h5>
+         <p>Skilled in developing robust, maintainable, and optimized applications 
+            using Python and Java for both local and enterprise environments. Proficient 
+            in REST APIs and microservices (Flask, Spring Boot), automation and data pipelines, 
+            desktop and backend services, data processing, analysis, and visualization 
+            (Pandas, NumPy, Matplotlib). Strong focus on clean, testable, and well‑documented code 
+            for long‑term maintainability and scalability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Research Interests" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Research Interests</h2>
+    <div class="row g-4">
+      
+      <!--Research Interests 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 research-card">
+          <img src="area1.png" class="card-img-top" alt="Blockchain">
+          <div class="card-body">
+            <h5 class="card-title">Blockchain</h5>
+            <p class="card-text">Exploring the use of Blockchain to build trusted, 
+              decentralized digital ecosystems. This research focuses on digital identities, supply chain 
+              traceability, and secure data sharing, enabling transparency and resilience across industries..</p>
+          </div>
+          <div class="card-footer bg-white">
+            <a href="researcharea1.html" class="btn btn-sm btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Interests 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 research-card">
+          <img src="area2.png" class="card-img-top" alt="Handle System">
+          <div class="card-body">
+            <h5 class="card-title">Handle System</h5>
+            <p class="card-text">Exploring the Handle System as a foundation for persistent,
+               trusted digital identifiers. This research focuses on creating long‑term, 
+               secure links between digital objects, ensuring their accessibility, traceability, 
+              and verification across global platforms and industries..</p>
+          </div>
+          <div class="card-footer bg-white">
+            <a href="researcharea2.html" class="btn btn-sm btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Research Interests 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 research-card">
+          <img src="area3.png" class="card-img-top" alt=" Data Anonymization">
+          <div class="card-body">
+            <h5 class="card-title"> Data Anonymization</h5>
+            <p class="card-text">Research in this area develops methods to protect sensitive information 
+              by removing or masking personal identifiers. It focuses on privacy-preserving techniques 
+              like k‑anonymity, differential privacy, and data masking, 
+              making data usable for analysis while safeguarding individual privacy.</p>
+          </div>
+          <div class="card-footer bg-white">
+            <a href="researcharea3.html" class="btn btn-sm btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Projects" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">Current Projects</h2>
+    <div class="row text-start">
+      
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4 col-xl-2 mb-4 mx-auto">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">BHH</h5>
+            <p class="card-text">Blockchain‑Based Handle System for Healthcare.</p>
+            <a href="project1.html" class="btn btn-sm btn-outline-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Project 2 -->
+      <div class="col-md-6 col-lg-4 col-xl-2 mb-4 mx-auto">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">UBHS Architecture</h5>
+            <p class="card-text">Unified Blockchain Handle System: An Efficient Data Management Framework.</p>
+            <a href="project2.html" class="btn btn-sm btn-outline-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4 col-xl-2 mb-4 mx-auto">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">BHCBDC</h5>
+            <p class="card-text">Blockchain‑Based Handle System for Central Bank Digital Currency .</p>
+            <a href="project3.html" class="btn btn-sm btn-outline-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project 4 -->
+      <div class="col-md-6 col-lg-4 col-xl-2 mb-4 mx-auto">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">E-GPBPID</h5>
+            <p class="card-text"> E-Government Platform Based on Blockchain with Persistent Identifiers.</p>
+            <a href="project4.html" class="btn btn-sm btn-outline-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-6 col-lg-4 col-xl-2 mb-4 mx-auto">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">AFTBHS</h5>
+            <p class="card-text">Agriculture and Food Traceability based on Blockchain-Handle System.</p>
+            <a href="project5.html" class="btn btn-sm btn-outline-primary">More Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="Publications" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Publications</h2>
+    <ul class="list-unstyled publication-list">
+      
+      <!-- Publication 1 -->
+      <li class="publication mb-4">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <h5 class="pub-title">Using Handle system to provide persistent identifiers for diploma</h5>
+          <p class="pub-authors"><em>Mahamat Ali Hisseine</em>, <em>Deji Chen</em>, <em>Yang Xiao</em> and <em>Xiao Wang</em> </p>
+          <p class="pub-venue">2022 2nd International Conference on Consumer Electronics and Computer Engineering (ICCECE), 2022, pp. 68-73</p>
+        </div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/ICCECE54139.2022.9712843" class="btn btn-sm btn-outline-primary me-2">Full article</a>
+          <a href="abstract1.html" class="btn btn-sm btn-outline-secondary">Abstract</a>
+        </div>
+      </li>
+
+      <!-- Publication 2 -->
+      <li class="publication mb-4">
+        <div class="pub-meta">
+          <span class="pub-year">2022</span>
+          <h5 class="pub-title">The Application of Blockchain in Social Media: A Systematic Literature Review</h5>
+          <p class="pub-authors"><em>Mahamat Ali Hisseine</em>, <em>Deji Chen</em> and <em>Yang Xiao</em></p>
+          <p class="pub-venue">Applied Sciences. 12(13):6567</p>
+        </div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.3390/app12136567" class="btn btn-sm btn-outline-primary me-2">Full article</a>
+          <a href="abstract2.html" class="btn btn-sm btn-outline-secondary">Abstract</a>
+        </div>
+      </li>
+
+    <!-- Publication 3 -->
+      <li class="publication mb-4">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <h5 class="pub-title">A review of digital object architecture and handle system: Development, current applications and prospective</h5>
+          <p class="pub-authors"><em>Mahamat Ali Hisseine</em>, <em>Deji Chen</em>, <em>Yang Xiao</em> and <em>Philip Kofi Alimo</em></p>
+          <p class="pub-venue">Internet of Things, Volume 26, 2024,101230</p>
+        </div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.iot.2024.101230" class="btn btn-sm btn-outline-primary me-2">Full article</a>
+          <a href="abstract3.html" class="btn btn-sm btn-outline-secondary">Abstract</a>
+        </div>
+      </li>
+
+    <!-- Publication 4 -->
+      <li class="publication mb-4">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <h5 class="pub-title">Blockchain based handle system to secure Predictive maintenance analysis system in Industrial IoT using L<sup>2</sup>S–GRU</h5>
+          <p class="pub-authors"><em>Mahamat Ali Hisseine</em>, <em>Deji Chen</em> and <em>Yang Xiao</em></p>
+          <p class="pub-venue">Internet of Things, Volume 31, 2025,101549</p>
+        </div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.iot.2025.101549" class="btn btn-sm btn-outline-primary me-2">Full article</a>
+          <a href="abstract4.html" class="btn btn-sm btn-outline-secondary">Abstract</a>
+        </div>
+      </li>
+
+    <!-- Publication 5 -->
+      <li class="publication mb-4">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <h5 class="pub-title">Enhancing Handle System for Digital Credentials Verification by Using Blockchain</h5>
+          <p class="pub-authors"><em>Mahamat Ali Hisseine</em>, <em>Deji Chen</em> and <em>Yang Xiao</em></p>
+          <p class="pub-venue"> IAENG International Journal of Computer Science, 52 (5), 2025, pp. 1484 – 1500.</p>
+        </div>
+        <div class="pub-links">
+          <a href="https://www.iaeng.org/IJCS/issues_v52/issue_5/IJCS_52_5_17.pdf" class="btn btn-sm btn-outline-primary me-2">Full article</a>
+          <a href="abstract5.html" class="btn btn-sm btn-outline-secondary">Abstract</a>
+        </div>
+      </li>
+
+      <!-- Add more publications as needed -->
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact</h2>
+    <p>Email us at: <a href="mailto: mahamatalihisseine@gmail.com; mahamat@tongji.edu.cn">mahamatalihisseine@gmail.com; mahamat@tongji.edu.cn</a></p>
+                    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+  <small>&copy; 2025 mahamat</small>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.getAttribute("data-filter");
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute("data-category");
+          if (filter === "All" || category === filter) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Optional: highlight active button
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+  });
+</script>
+<script src="main.js"></script>
+<button id="scrollToTop" title="Go to top">↑</button>
+<div id="lightbox" style="display:none;">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="Lightbox">
+</div>
+
+<!-- Scripts -->
+<script>
+const buttons = document.querySelectorAll('.filter-btn');
+const skills = document.querySelectorAll('.skill-item');
+
+buttons.forEach(button => {
+  button.addEventListener('click', e => {
+    const filter = e.target.getAttribute('data-filter');
+    skills.forEach(skill => {
+      if (filter === 'All' || skill.getAttribute('data-category') === filter) {
+        skill.style.display = '';
+      } else {
+        skill.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ 
+    duration: 1000,
+    once: true 
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Research Area: Blockchain</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- BOOTSTRAP -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.min.css" rel="stylesheet">
+
+<!-- FONTAWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- AOS Styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+<!-- SWIPER Styles -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<style>
+body { font-family: Arial, sans-serif; }
+.header {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('images/area1.png') no-repeat center center/cover;
+}
+.header::before {
+  content:'';
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+}
+.header h1 {
+  position:relative;
+  font-size:3rem;
+  font-weight:bold;
+}
+.content { padding:60px 20px; }
+.content h2 { font-size:2rem; }
+.content p, .content li { font-size:1.1rem; line-height:1.7; }
+.icon { font-size:1.5rem; color:#007BFF; }
+.footer { text-align:center; padding:40px 20px; }
+.timeline { position:relative; padding:40px 0; }
+.timeline-item { position:relative; padding-left:40px; margin-bottom:30px; }
+.timeline-item::before {
+  content:'';
+  position:absolute;
+  left:10px; top:8px;
+  width:8px; height:8px;
+  background:#007BFF;
+  border-radius:50%;
+}
+.timeline-item::after {
+  content:'';
+  position:absolute;
+  left:13px; top:16px;
+  bottom:-10px;
+  width:2px;
+  background:#007BFF;
+}
+</style>
+</head>
+<body>
+
+<!-- Dark/Light Mode Toggle -->
+<div class="text-end p-3">
+  <button id="theme-toggle" class="btn btn-sm btn-dark">🌙 Dark Mode</button>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <h1 data-aos="fade-down">Research Area: Blockchain</h1>
+</header>
+
+<!-- Main Content -->
+<section class="content container">
+
+  <!-- Overview -->
+  <div class="mb-5" data-aos="fade-up">
+    <h2>Overview</h2>
+    <p id="overview">Loading...</p>
+  </div>
+
+  <!-- Focus Areas -->
+  <div class="mb-5" data-aos="fade-right">
+    <h2>Research Focus Areas</h2>
+    <ul id="focus-areas" class="list-unstyled"></ul>
+  </div>
+
+  <!-- Technologies & Frameworks -->
+  <div class="mb-5" data-aos="fade-left">
+    <h2>Technologies & Frameworks</h2>
+    <p id="technologies">Loading technologies data...</p>
+  </div>
+
+  <!-- Interactive Graph -->
+  <div class="mb-5" data-aos="fade-up">
+    <h2>Research Impact</h2>
+    <canvas id="impactChart" height="100"></canvas>
+  </div>
+
+  <!-- Timeline / Milestones -->
+  <div class="mb-5" data-aos="fade-up">
+    <h2>Research Milestones</h2>
+    <div class="timeline" id="milestones"></div>
+  </div>
+
+  <!-- Selected Projects & Publications -->
+  <div class="mb-5" data-aos="fade-up">
+    <h2>Selected Projects & Publications</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper" id="projects-slider"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<div class="footer">
+  <a href="../#Research Interests" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back to Research Interests</a>
+</div>
+
+<!-- Scripts -->
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- SWIPER JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- CHART.JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+<!-- MAIN JS -->
+<script>
+AOS.init({ duration:1000, once:true });
+
+// Dark Mode Toggle
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('bg-dark');
+  document.body.classList.toggle('text-white');
+  themeBtn.textContent = document.body.classList.contains('bg-dark') 
+    ? '☀️ Light Mode' 
+    : '🌙 Dark Mode';
+});
+
+// Interactive Graph
+const ctx = document.getElementById('impactChart');
+new Chart(ctx, {
+  type:'bar',
+  data:{ labels:['2021','2022','2023','2024'], 
+    datasets:[{ label:'Research Impact', data:[15,30,50,75], backgroundColor:['#007BFF','#0062CC','#0051A3','#003A73'] }] 
+  },
+  options:{ responsive:true, scales:{ y:{ beginAtZero:true } } }
+});
+
+// Load JSON
+fetch('researcharea/research.json')
+  .then(resp => resp.json())
+  .then(data => {
+    const area = data.find(a => a.title === "Blockchain"); // Find Blockchain area
+    if (!area) return;
+
+    document.getElementById('overview').textContent = area.overview;
+
+    const focusList = document.getElementById('focus-areas');
+    area.focus_areas.forEach(f => {
+      const li = document.createElement('li');
+      li.innerHTML = `<i class="fa ${f.icon} icon"></i> ${f.text}`;
+      focusList.appendChild(li);
+    });
+    document.getElementById('technologies').textContent = area.technologies;
+
+    const milestonesContainer = document.getElementById('milestones');
+    area.milestones.forEach(m => {
+      const div = document.createElement('div');
+      div.classList.add('timeline-item');
+      div.innerHTML = `<strong>${m.year}:</strong> ${m.description}`;
+      milestonesContainer.appendChild(div);
+    });
+    const projectsSlider = document.getElementById('projects-slider');
+    area.projects.forEach(proj => {
+      const slide = document.createElement('div');
+      slide.classList.add('swiper-slide');
+      slide.innerHTML = `<img src="${proj.image}" alt="${proj.name}" style="width:100%; border-radius:8px;"><h5 class="mt-2">${proj.name}</h5>`;
+      projectsSlider.appendChild(slide);
+    });
+    initSwiper();
+  });
+
+// Initialize Swiper
+function initSwiper() {
+  new Swiper('.mySwiper', {
+    slidesPerView:1,
+    spaceBetween:30,
+    pagination:{ el:'.swiper-pagination', clickable:true },
+    navigation:{ nextEl:'.swiper-button-next', prevEl:'.swiper-button-prev' },
+    breakpoints:{ 768:{ slidesPerView:2 }, 1024:{ slidesPerView:3 } }
+  });
+}
+</script>
+</body>
+</html>
